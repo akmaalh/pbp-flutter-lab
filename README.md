@@ -5,7 +5,7 @@ Stateless widget merupakan widget yang kondisinya tidak pernah berubah. Sebalikn
 ## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 Widget yang digunakan pada Tugas 7 ini adalah `FloatingActionButton` widget tersebut di-bind oleh fungsi yang akan increment dan decrement _counter dan juga menampilkan informasi "GANJIL" dan "GENAP" sesuai kondisional yang telah dibuat. Selain itu, pada widget pun dibuat kondisional, yaitu ketika counter bernilai 0, maka `FloatingActionButton` akan diubah dengan `sizedBox` transparan.
 ## Apa fungsi dari setState()? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
-SetState berfungsi untuk memberi tahu ketika ada internal state yang berubah sehingga state yang ditampilkan akan berubah juga.
+SetState berfungsi untuk memberi tahu ketika ada internal state yang berubah sehingga state yang ditampilkan akan berubah juga. Misal, untuk tugas 7 ini, variabel yang terdampak adalah _counter.
 ## Jelaskan perbedaan antara const dengan final.
 `const` berfungsi untuk men-_declare_ variabel yang immutable lalu value nya harus dipastikan sudah diketahui saat compile. Sementara `final` berfungsi untuk men-_declare_ variabel immutable yang valuenya boleh belum diketahui atau sudah diketahui saat compile.
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
