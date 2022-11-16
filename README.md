@@ -30,10 +30,10 @@ SetState berfungsi untuk memberi tahu ketika ada internal state yang berubah seh
 `Card` untuk menampilkan data input yang ada pada list.
 
 ##  Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
-`onPressed()`
-`onTap()`
-`onChanged()`
-`onSaved()`
+1. `onPressed()`
+2. `onTap()`
+3. `onChanged()`
+4. `onSaved()`
 
 ##  Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
 Navigator bekerja seperti struktur data stack, yaitu konsep _Last In First Out_. Setiap tampilan akan di-_push_ ke stack Navigator untuk ditampilkan. Jadi, tampilan yang ditampilkan merupakan halaman yang terakhir di-_push_ atau berada pada posisi paling atas pada stack.
