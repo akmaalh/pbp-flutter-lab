@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'form.dart';
+import 'data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,13 +62,14 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
-    void _decrementCounter() {
-      setState(() {
-        if (_counter > 0) {
-          _counter--;
-        }
-      });
-    }
+
+  void _decrementCounter() {
+    setState(() {
+      if (_counter > 0) {
+        _counter--;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -81,6 +84,45 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+      ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            // Menambahkan clickable menu
+            ListTile(
+              title: const Text('counter_7'),
+              onTap: () {
+                // Route menu ke halaman utama
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          const MyHomePage(title: 'Flutter Demo Home Page')),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('Tambah Budget'),
+              onTap: () {
+                // Route menu ke halaman form
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyFormPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('Data Budget'),
+              onTap: () {
+                // Route menu ke halaman form
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyDataPage()),
+                );
+              },
+            ),
+          ],
+        ),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -135,7 +177,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: const Icon(Icons.remove),
                   )
                 : const SizedBox(),
-
             FloatingActionButton(
               onPressed: _incrementCounter,
               tooltip: 'Increment',
@@ -144,7 +185,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
-
 
       // This trailing comma makes auto-formatting nicer for build methods.
     );
