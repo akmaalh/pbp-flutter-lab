@@ -47,3 +47,27 @@ Navigator bekerja seperti struktur data stack, yaitu konsep _Last In First Out_.
 5. Mengimport file .dart agar list input data dapat diakses pada data.dart.
 6. Menampilkan data pada list dengan menggunakan builder ListView.builder().
 7. Membuat Card untuk menampilkan judul, nominal, jenis budget.
+
+# Tugas 9
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Bisa, ketika data yang ada pada JSON tidak banyak. Karena jika data JSON sudah banyak, maka jika terjadi ketidaksesuaian struktur, kita susah untuk memperbaikinya. Membuat model akan menjaga kejelasan kode dan efisiensi.
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+`Card` untuk menampilkan data judul yang ada pada JSON. <br>
+`Text` untuk menampilkan teks. <br>
+`Checkbox` untuk menerima input berupa onChanged. Jadi ketika ada perubahan value dari checkbox, akan dijalankan kondisional <br>
+`FutureBuilder` untuk membangun tampilan dirinya sendiri. Berguna untuk menampilkan berbagai widget yang sama dengan data yang berbeda. <br>
+`Column` Menampilkan susunan isi widget / children secara vertikal. <br>
+`Row` Menampilkan susunan isi children secara horizontal.
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+1. Melakukan pub get http
+2. Membuat model serialisasi data JSON
+3. Melakukan fetch data dengan get HTTP request
+4. Serialisasi data JSON sesuai model dan simpan ke dalam list
+5. Tampilkan data dengan widget
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Menambah dependensi HTTP dengan pub get http
+2. Menambahkan model serialisasi data JSON
+3. Fetch data dari web heroku pada tugas 3, lalu serialize data tersebut. Lalu menambahkan pula permission untuk android
+4. Membuat halaman baru untuk menampilkan data JSON pada card
+5. Membuat navigator.push dan routing ke halaman detail
+6. Membuat kalaman detail yang menampilkan data atribut-atribut dari objek-objek model watchlist
